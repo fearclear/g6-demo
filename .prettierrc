@@ -1,7 +1,14 @@
 {
   "singleQuote": true,
   "trailingComma": "all",
+<<<<<<< HEAD
   "printWidth": 80,
+=======
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 80,
+  "jsxBracketSameLine": true,
+>>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
   "overrides": [
     {
       "files": ".prettierrc",

@@ -1,6 +1,10 @@
 {
   "private": true,
   "scripts": {
+<<<<<<< HEAD
+=======
+    "dev": "umi dev",
+>>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
     "start": "umi dev",
     "build": "umi build",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
@@ -22,11 +26,31 @@
     "@antv/g6": "^3.4.2",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.0.14",
+<<<<<<< HEAD
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
+=======
+>>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "umi": "^3.0.14",
     "yorkie": "^2.0.0"
+<<<<<<< HEAD
+=======
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+>>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
   }
 }

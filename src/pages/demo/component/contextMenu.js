@@ -56,4 +56,8 @@ const NodeContextMenu = ({ x = -300, y = 0 }) => {
   </Menu>
 }
 
+<<<<<<< HEAD
 export default NodeContextMenu
+=======
+export default NodeContextMenu
+>>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1

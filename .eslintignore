@@ -5,3 +5,4 @@ src/assets
 # 忽略public目录下文件的语法检查
 public
 # 开启eslint
+src/pages/demo

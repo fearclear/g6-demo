@@ -74,6 +74,8 @@ export default function App () {
               trigger: 'click',
               onChange: (item, collapsed) => {
                 const data = item?.getModel()
+                const group = item?.get('group')
+                console.log(group)
                 if (data) {
                   data.collapsed = collapsed
                 }

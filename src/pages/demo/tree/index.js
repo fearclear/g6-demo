@@ -48,13 +48,13 @@ const TreeGraphReact = () => {
           default: ['drag-canvas']
         },
         defaultEdge: {
-          shape: 'cubic-horizontal',
+          type: 'cubic-horizontal',
           style: {
             stroke: '#A3B1BF'
           }
         },
         defaultNode: {
-          shape: 'rect',
+          type: 'rect',
           labelCfg: {
             style: {
               fill: '#000000A6',

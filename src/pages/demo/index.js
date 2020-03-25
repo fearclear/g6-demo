@@ -72,6 +72,7 @@ export default function () {
       setNodeContextMenuX(point.x)
       setNodeContextMenuY(point.y)
       setShowNodeContextMenu(true)
+      evt.preventDefault()
     })
   }
 
@@ -85,7 +86,7 @@ export default function () {
           default: ['drag-canvas']
         },
         defaultNode: {
-          shape: 'node',
+          type: 'node',
           labelCfg: {
             style: {
               fill: '#000000A6',
@@ -98,7 +99,7 @@ export default function () {
           }
         },
         defaultEdge: {
-          shape: 'polyline'
+          type: 'polyline'
         },
         layout: {
           type: 'dagre',

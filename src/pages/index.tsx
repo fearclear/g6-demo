@@ -8,6 +8,7 @@ const data = {
     {
       id: 'sub1',
       label: 'sub1',
+      description: '描述信息',
       children: [
         {
           id: 'sub1.1',
@@ -48,25 +49,33 @@ export default function App () {
         height: 800,
         layout: {
           type: 'compactBox',
-          direction: 'LR'
+          direction: 'LR',
+          getId: d => d.id,
+          getWidth: () => 140,
+          getVGap: () => 24,
+          getHGap: () => 50
         },
-        // defaultNode: {
-        //   size: 26,
-        //   anchorPoints: [
-        //     [0, 0.5],
-        //     [1, 0.5]
-        //   ],
-        //   style: {
-        //     fill: '#C6E5FF',
-        //     stroke: '#5B8FF9'
-        //   }
-        // },
-        // defaultEdge: {
-        //   type: 'cubic-horizontal',
-        //   style: {
-        //     stroke: '#A3B1BF'
-        //   }
-        // },
+        defaultNode: {
+          type: 'modelRect',
+          anchorPoints: [
+            [0, 0.5],
+            [1, 0.5]
+          ],
+          style: {
+            fill: '#fff',
+            stroke: '#f2f2f2',
+            shadowBlur: 1,
+            shadowColor: '#f2f2f2',
+            shadowOffsetX: 1,
+            shadowOffsetY: 1
+          }
+        },
+        defaultEdge: {
+          type: 'cubic-horizontal',
+          style: {
+            stroke: '#A3B1BF'
+          }
+        },
         modes: {
           default: [
             {

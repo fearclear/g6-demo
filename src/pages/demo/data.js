@@ -102,11 +102,7 @@ export const data = {
       }
     },
     {
-<<<<<<< HEAD
-      source: '8',
-=======
       source: '1',
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
       target: '9',
       data: {
         type: '凭证融资',
@@ -115,8 +111,4 @@ export const data = {
       }
     }
   ]
-<<<<<<< HEAD
-};
-=======
 }
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1

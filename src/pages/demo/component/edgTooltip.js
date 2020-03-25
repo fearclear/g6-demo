@@ -3,11 +3,7 @@ import styles from './index.css'
 
 const EdgeToolTips = ({ x, y }) => {
   return (
-<<<<<<< HEAD
-    <div className={styles.edgeTooltips} style={{ top: `${y}px`, left: `${x}px`}}>
-=======
     <div className={styles.edgeTooltips} style={{ top: `${y}px`, left: `${x}px` }}>
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
       <div className={styles.edgeTitle}>
         <p className={styles.tooltipsCommon}>凭证开立</p>
         <p className={`${styles.tooltipsCommon} ${styles.tooltipsMoney}`}>1000,000,000元</p>

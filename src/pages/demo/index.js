@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { data } from './data';
-import G6 from '@antv/g6';
-import { NodeTooltips, EdgeToolTips, NodeContextMenu } from './component'
-import './registerShape';
-
-export default function() {
-=======
 import React, { useEffect, useState } from 'react'
 import { data } from './data'
 import G6 from '@antv/g6'
@@ -14,7 +5,6 @@ import { NodeTooltips, EdgeToolTips, NodeContextMenu } from './component'
 import './registerShape'
 
 export default function () {
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
   const ref = React.useRef(null)
   let graph = null
 
@@ -37,11 +27,7 @@ export default function () {
     graph.on('edge:mouseenter', evt => {
       const { item, target } = evt
       const type = target.get('type')
-<<<<<<< HEAD
-      if(type !== 'text') {
-=======
       if (type !== 'text') {
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
         return
       }
       const model = item.getModel()
@@ -86,19 +72,12 @@ export default function () {
       setNodeContextMenuX(point.x)
       setNodeContextMenuY(point.y)
       setShowNodeContextMenu(true)
-<<<<<<< HEAD
-=======
       evt.preventDefault()
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
     })
   }
 
   useEffect(() => {
-<<<<<<< HEAD
-    if(!graph) {
-=======
     if (!graph) {
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
       graph = new G6.Graph({
         container: ref.current,
         width: 1200,
@@ -107,11 +86,7 @@ export default function () {
           default: ['drag-canvas']
         },
         defaultNode: {
-<<<<<<< HEAD
-          shape: 'node',
-=======
           type: 'node',
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
           labelCfg: {
             style: {
               fill: '#000000A6',
@@ -124,11 +99,7 @@ export default function () {
           }
         },
         defaultEdge: {
-<<<<<<< HEAD
-          shape: 'polyline'
-=======
           type: 'polyline'
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
         },
         layout: {
           type: 'dagre',
@@ -163,9 +134,5 @@ export default function () {
       { showNodeTooltip && <NodeTooltips x={nodeTooltipX} y={nodeTooltipY} /> }
       { showNodeContextMenu && <NodeContextMenu x={nodeContextMenuX} y={nodeContextMenuY} /> }
     </div>
-<<<<<<< HEAD
-  );
-=======
   )
->>>>>>> d33dfd7aac5a6085bff900ab0ccc89165716eef1
 }

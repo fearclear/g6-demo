@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { data } from './data';
-import G6 from '@antv/g6';
+import React, { useEffect, useState } from 'react'
+import { data } from './data'
+import G6 from '@antv/g6'
 import { NodeTooltips, EdgeToolTips, NodeContextMenu } from './component'
-import './registerShape';
+import './registerShape'
 
-export default function() {
+export default function () {
   const ref = React.useRef(null)
   let graph = null
 
@@ -26,9 +26,8 @@ export default function() {
     // 监听edge上面mouse事件
     graph.on('edge:mouseenter', evt => {
       const { item, target } = evt
-      debugger
       const type = target.get('type')
-      if(type !== 'text') {
+      if (type !== 'text') {
         return
       }
       const model = item.getModel()
@@ -57,7 +56,7 @@ export default function() {
       setNodeToolTipY(point.y + 15)
       setShowNodeTooltip(true)
     })
-  
+
     // 节点上面触发mouseleave事件后隐藏tooltip和ContextMenu
     graph.on('node:mouseleave', () => {
       setShowNodeTooltip(false)
@@ -77,7 +76,7 @@ export default function() {
   }
 
   useEffect(() => {
-    if(!graph) {
+    if (!graph) {
       graph = new G6.Graph({
         container: ref.current,
         width: 1200,
@@ -109,9 +108,9 @@ export default function() {
         }
       })
     }
-    
+
     graph.data(data)
-  
+
     graph.render()
 
     const edges = graph.getEdges()
@@ -134,5 +133,5 @@ export default function() {
       { showNodeTooltip && <NodeTooltips x={nodeTooltipX} y={nodeTooltipY} /> }
       { showNodeContextMenu && <NodeContextMenu x={nodeContextMenuX} y={nodeContextMenuY} /> }
     </div>
-  );
+  )
 }

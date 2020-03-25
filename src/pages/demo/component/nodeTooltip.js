@@ -4,7 +4,7 @@ import 'antd/es/timeline/style/css'
 import styles from './index.css'
 const NodeToolTips = ({ x, y }) => {
   return (
-    <div className={styles.nodeTooltips} style={{ top: `${y}px`, left: `${x}px`}}>
+    <div className={styles.nodeTooltips} style={{ top: `${y}px`, left: `${x}px` }}>
       <Timeline>
         <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
         <Timeline.Item>Solve initial network problems 2015-09-01</Timeline.Item>

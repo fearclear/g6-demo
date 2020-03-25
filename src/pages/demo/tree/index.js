@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect } from 'react'
+import ReactDOM from 'react-dom'
 import { Button } from 'antd'
-import G6 from '@antv/g6';
+import G6 from '@antv/g6'
 
 const treeData = {
   id: 'root',
@@ -13,7 +13,7 @@ const treeData = {
       children: [
         {
           id: 'SubTreeNode1.1',
-          label: 'subroot1.1',
+          label: 'subroot1.1'
         }
       ]
     },
@@ -23,24 +23,23 @@ const treeData = {
       children: [
         {
           id: 'SubTreeNode2.1',
-          label: 'subroot2.1',
+          label: 'subroot2.1'
         },
         {
           id: 'SubTreeNode2.2',
-          label: 'subroot2.2',
+          label: 'subroot2.2'
         }
       ]
-    } 
+    }
   ]
-};
+}
 
 const TreeGraphReact = () => {
   const ref = React.useRef(null)
   let graph = null
 
   useEffect(() => {
-    if(!graph) {
-
+    if (!graph) {
       graph = new G6.TreeGraph({
         container: ref.current,
         width: 500,
@@ -69,9 +68,9 @@ const TreeGraphReact = () => {
         },
         layout: {
           type: 'dendrogram', // 布局类型
-          direction: 'LR',    // 自左至右布局，可选的有 H / V / LR / RL / TB / BT
-          nodeSep: 50,      // 节点之间间距
-          rankSep: 200      // 每个层级之间的间距
+          direction: 'LR', // 自左至右布局，可选的有 H / V / LR / RL / TB / BT
+          nodeSep: 50, // 节点之间间距
+          rankSep: 200 // 每个层级之间的间距
         }
       })
     }
@@ -93,7 +92,7 @@ const TreeGraphReact = () => {
     <div ref={ref}>
       <Button onClick={handleChangeData} type='primary'>更新数据源</Button>
     </div>
-  );
+  )
 }
 
 export default TreeGraphReact
